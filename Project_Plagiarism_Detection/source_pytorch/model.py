@@ -31,7 +31,7 @@ class BinaryClassifier(nn.Module):
 
         # define any initial layers, here
         
-
+        self.sig = nn.Sigmoid()
     
     ## TODO: Define the feedforward behavior of the network
     def forward(self, x):
@@ -55,7 +55,7 @@ class BinaryClassifier(nn.Module):
         # (3) Output Layer
         
         t = self.out(t)
-        t = F.softmax(t)
+        t = self.sig(t)
         
         return t
     
