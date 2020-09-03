@@ -72,7 +72,7 @@ def train(model, train_loader, epochs, criterion, optimizer, device):
         for batch in train_loader:
             # get data
             batch_x, batch_y = batch
-            print("Input Data\npanakj_batch_x \n" +  batch_x +"\n\npankaj_batch_y\n" + batch_y)
+            #print("Input Data\npanakj_batch_x \n" +  batch_x +"\n\npankaj_batch_y\n" + batch_y)
 
             batch_x = batch_x.to(device)
             batch_y = batch_y.to(device)
