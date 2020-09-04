@@ -28,6 +28,7 @@ class BinaryClassifier(nn.Module):
         
         self.fc1 = nn.Linear(in_features = input_features , out_features = hidden_dim)
         self.out = nn.Linear(in_features = hidden_dim , out_features = output_dim)
+        self.drop = nn.Dropout(0.3) # dropout with 30% prob
 
         # define any initial layers, here
         
@@ -51,6 +52,8 @@ class BinaryClassifier(nn.Module):
         
         t = self.fc1(t)
         t = F.relu(t)
+        
+        #t = self.drop(t) # adding dropout layer 
         
         # (3) Output Layer
         

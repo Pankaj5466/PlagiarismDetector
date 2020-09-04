@@ -145,7 +145,7 @@ if __name__ == '__main__':
     
     #now model for this will be
     #REFERENCE constructor of model.py module  def __init__(self, input_features, hidden_dim, output_dim):
-    model = BinaryClassifier(args.input_dim,args.hidden_dim,args.output_dim)
+    model = BinaryClassifier(args.input_dim,args.hidden_dim,args.output_dim).to(device)
 
     ## TODO: Define an optimizer and loss function for training
     optimizer = optim.Adam(model.parameters())
